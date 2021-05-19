@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{% url 'postcreate' %}" method="post">
+    {% csrf_token %}
+    <label for="title_id">제목</label><br>
+    <input type="text" name="title" id="title_id"><br>
+
+    <label for="body">글 내용</label><br>
+    <textarea name="body" id="body"></textarea><br>
+
+    <input type="submit" value="글쓰기"><br>
+    <input type="reset" value="초기화">
+
+</form>
+
+<br>
+<a href="{% url 'home' %}">홈으로</a>
+
+</body>
+</html>
